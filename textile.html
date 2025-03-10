@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextileHub Pro - Centralized Textile Platform</title>
+    <style>
+        :root {
+            --primary: #2A4E6E;
+            --secondary: #F5A623;
+            --light: #F8F9FA;
+            --dark: #212529;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui;
+        }
+
+        body {
+            background: var(--light);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary);
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .swot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .swot-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>TextileHub Pro</h1>
+        <p>Centralized Digital Platform for MSMEs</p>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#solution">Solution</a></li>
+            <li><a class="nav-link" href="#stats">Market Stats</a></li>
+            <li><a class="nav-link" href="#swot">Analysis</a></li>
+        </ul>
+    </nav>
+
+    <section class="section" id="about">
+        <h2>Revolutionizing Textile Operations</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">₹43000Cr</div>
+                <div>TN Market Size</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">25%</div>
+                <div>National Market Share</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">500K+</div>
+                <div>Power Looms</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="solution">
+        <h2>Our Integrated Solution</h2>
+        <div class="swot-grid">
+            <div class="swot-card">
+                <h3>Digital Platform Features</h3>
+                <ul>
+                    <li>Real-time Order Tracking</li>
+                    <li>Inventory Management</li>
+                    <li>Market Analytics</li>
+                    <li>Supplier Network</li>
+                </ul>
+            </div>
+            <div class="swot-card">
+                <h3>Revenue Model</h3>
+                <ul>
+                    <li>2% Supplier Commission</li>
+                    <li>4% Manufacturer Fee</li>
+                    <li>Logistics Charges</li>
+                    <li>Premium Subscriptions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="stats">
+        <h2>Market Projections</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">8-10%</div>
+                <div>Annual Growth</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">30%</div>
+                <div>Loss Reduction</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">₹10L</div>
+                <div>Monthly Profit</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="swot">
+        <h2>Strategic Analysis</h2>
+        <div class="swot-grid">
+            <div class="swot-card">
+                <h3>SWOT Highlights</h3>
+                <p><strong>Strength:</strong> Digital Innovation<br>
+                <strong>Weakness:</strong> Initial Funding<br>
+                <strong>Opportunity:</strong> E-commerce Growth<br>
+                <strong>Threat:</strong> Traditional Resistance</p>
+            </div>
+            <div class="swot-card">
+                <h3>PESTLE Factors</h3>
+                <p>Government Policies<br>
+                Market Analytics Integration<br>
+                Sustainable Practices<br>
+                Data Protection Compliance</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 TextileHub Pro - Centralized Agency Initiative</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic header shadow
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            header.style.boxShadow = window.scrollY > 50 ? 
+                '0 4px 6px rgba(0,0,0,0.2)' : 
+                '0 4px 6px rgba(0,0,0,0.1)';
+        });
+    </script>
+</body>
+</html>
