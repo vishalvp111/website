@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextileHub Pro - Centralized Textile Platform</title>
+    <style>
+        :root {
+            --primary: #2A4E6E;
+            --secondary: #F5A623;
+            --light: #F8F9FA;
+            --dark: #212529;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui;
+        }
+
+        body {
+            background: var(--light);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary);
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .swot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .swot-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        /* Language Switcher Styles */
+        .language-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .language-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .language-btn:hover {
+            background-color: #e09620;
+        }
+
+        /* Hide Tamil content by default */
+        .tamil {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .language-switcher {
+                position: relative;
+                top: 0;
+                right: 0;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="language-switcher">
+            <button class="language-btn" id="langToggle">தமிழ்</button>
+        </div>
+        <h1 class="english">TextileHub Pro</h1>
+        <h1 class="tamil">டெக்ஸ்டைல்ஹப் புரோ</h1>
+        <p class="english">Centralized Digital Platform for MSMEs</p>
+        <p class="tamil">MSMEகளுக்கான மையப்படுத்தப்பட்ட டிஜிட்டல் தளம்</p>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a class="nav-link english" href="#about">About</a></li>
+            <li><a class="nav-link tamil" href="#about">பற்றி</a></li>
+            <li><a class="nav-link english" href="#solution">Solution</a></li>
+            <li><a class="nav-link tamil" href="#solution">தீர்வு</a></li>
+            <li><a class="nav-link english" href="#stats">Market Stats</a></li>
+            <li><a class="nav-link tamil" href="#stats">சந்தை புள்ளிவிவரங்கள்</a></li>
+            <li><a class="nav-link english" href="#swot">Analysis</a></li>
+            <li><a class="nav-link tamil" href="#swot">பகுப்பாய்வு</a></li>
+        </ul>
+    </nav>
+
+    <section class="section" id="about">
+        <h2 class="english">Revolutionizing Textile Operations</h2>
+        <h2 class="tamil">ஜவுளி செயல்பாடுகளை புரட்சிகரமாக்குதல்</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">₹43000Cr</div>
+                <div class="english">TN Market Size</div>
+                <div class="tamil">தமிழ்நாடு சந்தை அளவு</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">25%</div>
+                <div class="english">National Market Share</div>
+                <div class="tamil">தேசிய சந்தை பங்கு</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">500K+</div>
+                <div class="english">Power Looms</div>
+                <div class="tamil">மின் தறிகள்</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="solution">
+        <h2 class="english">Our Integrated Solution</h2>
+        <h2 class="tamil">எங்களின் ஒருங்கிணைந்த தீர்வு</h2>
+        <div class="swot-grid">
+            <div class="swot-card">
+                <h3 class="english">Digital Platform Features</h3>
+                <h3 class="tamil">டிஜிட்டல் தளத்தின் அம்சங்கள்</h3>
+                <ul class="english">
+                    <li>Real-time Order Tracking</li>
+                    <li>Inventory Management</li>
+                    <li>Market Analytics</li>
+                    <li>Supplier Network</li>
+                </ul>
+                <ul class="tamil">
+                    <li>நிகழ்நேர ஆர்டர் கண்காணிப்பு</li>
+                    <li>சரக்கு மேலாண்மை</li>
+                    <li>சந்தை பகுப்பாய்வு</li>
+                    <li>சப்ளையர் நெட்வொர்க்</li>
+                </ul>
+            </div>
+            <div class="swot-card">
+                <h3 class="english">Revenue Model</h3>
+                <h3 class="tamil">வருவாய் மாடல்</h3>
+                <ul class="english">
+                    <li>2% Supplier Commission</li>
+                    <li>4% Manufacturer Fee</li>
+                    <li>Logistics Charges</li>
+                    <li>Premium Subscriptions</li>
+                </ul>
+                <ul class="tamil">
+                    <li>2% சப்ளையர் கமிஷன்</li>
+                    <li>4% உற்பத்தியாளர் கட்டணம்</li>
+                    <li>லாஜிஸ்டிக்ஸ் கட்டணங்கள்</li>
+                    <li>பிரீமியம் சந்தாக்கள்</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="stats">
+        <h2 class="english">Market Projections</h2>
+        <h2 class="tamil">சந்தை கணிப்புகள்</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">8-10%</div>
+                <div class="english">Annual Growth</div>
+                <div class="tamil">ஆண்டு வளர்ச்சி</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">30%</div>
+                <div class="english">Loss Reduction</div>
+                <div class="tamil">இழப்பு குறைப்பு</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">₹10L</div>
+                <div class="english">Monthly Profit</div>
+                <div class="tamil">மாதாந்திர லாபம்</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="swot">
+        <h2 class="english">Strategic Analysis</h2>
+        <h2 class="tamil">உத்திசார் பகுப்பாய்வு</h2>
+        <div class="swot-grid">
+            <div class="swot-card">
+                <h3 class="english">SWOT Highlights</h3>
+                <h3 class="tamil">SWOT சிறப்பம்சங்கள்</h3>
+                <p class="english"><strong>Strength:</strong> Digital Innovation<br>
+                <strong>Weakness:</strong> Initial Funding<br>
+                <strong>Opportunity:</strong> E-commerce Growth<br>
+                <strong>Threat:</strong> Traditional Resistance</p>
+                <p class="tamil"><strong>பலம்:</strong> டிஜிட்டல் புதுமை<br>
+                <strong>பலவீனம்:</strong> ஆரம்ப நிதி<br>
+                <strong>வாய்ப்பு:</strong> இ-காமர்ஸ் வளர்ச்சி<br>
+                <strong>அச்சுறுத்தல்:</strong> பாரம்பரிய எதிர்ப்பு</p>
+            </div>
+            <div class="swot-card">
+                <h3 class="english">PESTLE Factors</h3>
+                <h3 class="tamil">PESTLE காரணிகள்</h3>
+                <p class="english">Government Policies<br>
+                Market Analytics Integration<br>
+                Sustainable Practices<br>
+                Data Protection Compliance</p>
+                <p class="tamil">அரசு கொள்கைகள்<br>
+                சந்தை பகுப்பாய்வு ஒருங்கிணைப்பு<br>
+                நிலையான நடைமுறைகள்<br>
+                தரவு பாதுகாப்பு இணக்கம்</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="english">© 2025 TextileHub Pro - Centralized Agency Initiative</p>
+        <p class="tamil">© 2025 டெக்ஸ்டைல்ஹப் புரோ - மையப்படுத்தப்பட்ட முகமை முயற்சி</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dynamic header shadow
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            header.style.boxShadow = window.scrollY > 50 ? 
+                '0 4px 6px rgba(0,0,0,0.2)' : 
+                '0 4px 6px rgba(0,0,0,0.1)';
+        });
+
+        // Language switcher functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langToggle = document.getElementById('langToggle');
+            const englishElements = document.querySelectorAll('.english');
+            const tamilElements = document.querySelectorAll('.tamil');
+            let currentLang = 'english';
+
+            // Function to toggle language
+            function toggleLanguage() {
+                if (currentLang === 'english') {
+                    // Switch to Tamil
+                    englishElements.forEach(el => el.style.display = 'none');
+                    tamilElements.forEach(el => el.style.display = 'block');
+                    langToggle.textContent = 'English';
+                    currentLang = 'tamil';
+                } else {
+                    // Switch to English
+                    englishElements.forEach(el => el.style.display = 'block');
+                    tamilElements.forEach(el => el.style.display = 'none');
+                    langToggle.textContent = 'தமிழ்';
+                    currentLang = 'english';
+                }
+            }
+
+            // Set initial language state
+            tamilElements.forEach(el => el.style.display = 'none');
+            englishElements.forEach(el => el.style.display = 'block');
+
+            // Add event listener to language toggle button
+            langToggle.addEventListener('click', toggleLanguage);
+        });
+    </script>
+</body>
+</html>
